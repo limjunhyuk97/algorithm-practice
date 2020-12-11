@@ -27,4 +27,4 @@ inline void swap(int &n, int &m){
 ```
 
 ## 2. 시간복잡도
-	- O(N^2)
+  - O(N^2)
