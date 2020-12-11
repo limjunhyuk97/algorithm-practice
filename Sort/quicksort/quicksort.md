@@ -4,51 +4,39 @@
 
 ```cpp
 
-// QuickSort 코드 구현. <- 인자는 array(배열) 포인터, 시작점, 끝점.
-void Qsort(int * array, int start, int end){
-	
-  // 길이가 1인 경우를 제외하는 부분. 
-	if(start>=end) return;
-	
-  // pivot이 기준점. i는 왼쪽, j는 오른쪽.
-	int pivot = start, i = start + 1, j = end - 1;
-	
-  // i와 j가 뒤집힐때까지 반복
-	while(i<=j){
-  
-    // pivot 보다 작아야하는데, 큰놈 발견하면 알박기 
-		while(i <= end && array[pivot] >= array[i]){
-			++i;
-		}
-    
-    // pivot 보다 커야되는데, 작은놈 발견하면 알박기
-		while(j > start && array[pivot] <= array[j] ){
-			--j;
-		}
-    
-    // i, j 순서 안뒤집힘 : i, j 위치 바꿈 
-    // 결과적으로 pivot 기준, 작은 놈들, 큰 놈들이 정위치로 들어가게됨
-		if(i<j) swap(array[i], array[j]);
-    
-    // i, j 순서 뒤집힘 : j, pivot 위치 바꿈
-    // pivot보다 작은 j를 발견했기에, 이제 pivot이 정위치에 들어감. (pivot 기준 왼쪽 다 pivot보다 작고, pivot 기준 오른쪽 다 pivot보다 큼)
-		else swap(array[j], array[pivot]);
-	} 
-	
-  // 정해진 j 위치를 기준으로 왼쪽 재정렬 반복 수행.
-	Qsort(array, start, j-1);
-  
-  // 정해진 j 위치를 기준으로 오른쪽 재정렬 반복 수행.
-	Qsort(array, j+1, end);
-	
+inline void swap(int &a, int &b){
+    int t = a; a = b; b = t;
 }
 
-// 편의를 위해서 swap 함수를 참조자 매개변수로 별도 지정. (포인터로 지정할 수도 있지.)
-inline void swap(int &n, int &m){
-	int tmp;
-	tmp = n;
-	n = m;
-	m= tmp;
+void quickSort(int A[], int low, int high) {
+
+    // base condition
+    // 길이가 1인 친구는 정지.
+    if(low >= high) return;
+
+    // divide process
+    // i는 시작점 - 1 부분. j는 시적점 부분.
+    int i = low-1, j = low;
+    
+    // pivot
+    // &pivot 참조자로 초기화하는 이유는 main에서 가져온 배열의 주소값을 공유하기 위해서 이다.
+    // int pivot으로 선언하면 swap(A[++i], pivot) 계산시에, pivot은 quickSort 안에서 한시적으로 생성된 메모리 이므로 정보가 pivot에서 A[++i]로만 넘어간다.
+    int &pivot = A[high];
+    
+    // 초기화 부분은 이미 되있어서 필요 없다. - 오름차순 정렬
+    // pivot 기준 작은 놈을 왼쪽으로 보내주는 작업
+    for (; j < high; ++j) {
+        if ( A[j] < pivot)
+            swap(A[++i], A[j]);
+    }
+    
+    // 마지막으로 ++i, pivot위치 교대로, pivot을 제 위치에 넣어 준다.
+    swap(A[++i], pivot);
+
+    // conquer process
+    // i 기준 왼쪽, 오른쪽 정렬 다시 시작.
+    quickSort(A, low, i-1);
+    quickSort(A, i+1, high);
 }
 
 ```
