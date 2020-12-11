@@ -28,7 +28,7 @@ void Qsort(int * array, int start, int end){
     
     // i, j 순서 안뒤집힘 : i, j 위치 바꿈 
     // 결과적으로 pivot 기준, 작은 놈들, 큰 놈들이 정위치로 들어가게됨
-		if(i<=j) swap(array[i], array[j]);
+		if(i<j) swap(array[i], array[j]);
     
     // i, j 순서 뒤집힘 : j, pivot 위치 바꿈
     // pivot보다 작은 j를 발견했기에, 이제 pivot이 정위치에 들어감. (pivot 기준 왼쪽 다 pivot보다 작고, pivot 기준 오른쪽 다 pivot보다 큼)
