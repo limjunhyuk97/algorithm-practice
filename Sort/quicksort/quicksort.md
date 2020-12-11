@@ -1,3 +1,7 @@
+# Quick sort 코드 구현
+
+```cpp
+
 // QuickSort 코드 구현. <- 인자는 array(배열) 포인터, 시작점, 끝점.
 void Qsort(int * array, int start, int end){
 	
@@ -44,3 +48,5 @@ inline void swap(int &n, int &m){
 	n = m;
 	m= tmp;
 }
+
+```
