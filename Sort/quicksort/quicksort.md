@@ -1,4 +1,6 @@
-# Quick sort 코드 구현
+# Quick sort
+
+## 1. 코드 구현
 
 ```cpp
 
@@ -50,3 +52,7 @@ inline void swap(int &n, int &m){
 }
 
 ```
+
+## 2. 시간 복잡도
+ - O(N\*logN)
+ - 그러나, 이미 정렬 되어있는 경우 O(N^2).
