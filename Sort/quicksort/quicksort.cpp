@@ -11,7 +11,7 @@ void Qsort(int * array, int start, int end){
 		while(j > start && array[pivot] <= array[j] ){
 			--j;
 		}
-		if(i<=j) swap(array[i], array[j]);
+		if(i<j) swap(array[i], array[j]);
 		else swap(array[j], array[pivot]);
 	} 
 	
