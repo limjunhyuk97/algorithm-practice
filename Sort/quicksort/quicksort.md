@@ -25,6 +25,7 @@ void quickSort(int A[], int low, int high) {
     
     // 초기화 부분은 이미 되있어서 필요 없다. - 오름차순 정렬
     // pivot 기준 작은 놈을 왼쪽으로 보내주는 작업
+    // pivot 기준 작은 놈의 수 만큼 교환이 이루어 지기에,, pivot이 34행에서 제 위치에 들어가게 된다.
     for (; j < high; ++j) {
         if ( A[j] < pivot)
             swap(A[++i], A[j]);
