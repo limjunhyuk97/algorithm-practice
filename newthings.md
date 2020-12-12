@@ -12,13 +12,14 @@
   
 ## 2020.12.12
 
-- <string> 헤더파일 안에 
-  -int형을 string으로 바꿔주는 to_string() 함수가 있다.
+- <string> 헤더파일 안에
+  
+  - int형을 string으로 바꿔주는 to_string() 함수가 있다.
+  - substring은 배열의 부분을 뜯어서 반환한다.
 ```cpp
 string str = to_string(123);
 // 123을 문자열로 바꿈
 ```
-  -substring은 배열의 부분을 뜯어서 반환한다.
 ```cpp
 substr(str, 0, 5);
 // str 문자열에서 index 0 부터 5만큼의 길이만큼 떼서 반환한다.
