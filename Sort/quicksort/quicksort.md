@@ -55,5 +55,8 @@ void quickSort(int A[], int low, int high) {
     int arr[len] = { , , , ,,,};
     sort(arr, arr + n);
     // 정렬 시작할 지점 주소, 종료할 지점 주소 + 1
+    
+    sort(v.begin(), v.end());
+    // vector container를 사용할 경우의 quick sort.
 ```
     
