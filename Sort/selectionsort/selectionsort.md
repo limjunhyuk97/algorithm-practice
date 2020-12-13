@@ -1,6 +1,6 @@
 # Selection sort
 
-## 코드구현
+## 1. 코드구현
 ```cpp
 // swap 함수 편의 상 구현
 void swap(int &n, int &m){
@@ -34,3 +34,6 @@ void selection_sort(int *array, int len){
 	}	
 }
 ```
+
+## 2. 시간 복잡도
+- O(n^2);
