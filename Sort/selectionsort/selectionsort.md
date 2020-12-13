@@ -36,4 +36,4 @@ void selection_sort(int *array, int len){
 ```
 
 ## 2. 시간 복잡도
-- O(n^2);
+- O(n^2)
