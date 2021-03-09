@@ -24,3 +24,17 @@
     - **total steps = (sum of) (frequency * step count)**
 
 ![time complexity](https://user-images.githubusercontent.com/59442344/110460634-cd140300-8111-11eb-83f7-3fc941d207ef.png)
+
+  - **Measuring time using C**
+
+```c
+// method 1
+start = clock();
+stop = clock();
+clock_t Duration = ((double) (stop - start)) / CLOCKS_PER_SEC;
+
+// method 2
+start = time(NULL);
+stop = time(NULL);
+time_t Duration = (double)difftime(stop, start);
+```
