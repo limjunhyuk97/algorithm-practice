@@ -77,7 +77,7 @@ void DescendingSelectionSort2(int arr[], int n) {
 	}
 }
 
-void main(void) {
+int main(void) {
 
 	int arr[5] = { 2, 3, 1, 5, 4 };
 	
