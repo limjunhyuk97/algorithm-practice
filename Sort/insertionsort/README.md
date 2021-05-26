@@ -66,9 +66,6 @@ int main(void) {
 	DescendingInsertionSort1(arr, 5);
 	printArr(arr, 5);
 
-	AscendingInsertionSort2(arr, 5);
-	printArr(arr, 5);
-
 	return 0;
 }
 
