@@ -9,7 +9,8 @@ void swap(int* n, int* m) {
 	*m = tmp;
 }
 
-void QuickSort(int arr[], int left, int right) {
+// 중앙 index를 pivot으로 잡는 QuickSort
+void MedainQuickSort(int arr[], int left, int right) {
 
 	// left == rigt 인것 포함 (1개짜리는 정렬된 것)
 	if (left >= right)
@@ -43,8 +44,8 @@ void QuickSort(int arr[], int left, int right) {
 	// end 기준 양 옆이다!
 	// end 값이 제 위치가 아닐 수도 있다..!
 	// 5 3(end) 6(pivot) 7(start) 6 9 : end가 제 위치에 들어있지 않음
-	QuickSort(arr, left, end);
-	QuickSort(arr, end + 1, right);
+	MedainQuickSort(arr, left, end);
+	MedainQuickSort(arr, end + 1, right);
 
 }
 
