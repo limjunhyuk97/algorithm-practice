@@ -6,20 +6,23 @@
  - 다른 방식은 exponential time 걸려서 문제 해결 ( 지수함수 )
 
 ## 2. 어떤 문제에 DP를 적용할 수 있을까?
-  - optimal substructure property을 갖어야 함.
+  - **divide and conquer**
+    - **큰 문제를 작은 문제들로 쪼개서 해결할 수 있다는 분석이 가능한 경우**
+  - **optimal substructure property**을 갖어야 함.
     - optimal : best
     - substructure : sub-problem of main-problem
-    - subproblem들을 optimal 하게 풀면 mainproblem을 optimal하게 풀 수 있대요.
+    - **subproblem들을 optimal 하게 풀면 mainproblem을 optimal하게 풀 수 있다.**
     - x1 > x2 > x3 > x4 ... 문제를 분할해서 main problem으로 다가갈 수 있는가..?
-  - overlapping subproblems property을 갖어야 함.
-    - 동일한 연산을 여러번 반복해야할 경우.
+  - **overlapping subproblems property**을 갖어야 함.
+    - **동일한 연산을 여러번 반복**해야할 경우.
 
 ## 3. DP를 어떻게 활용하는가?
- - memoization : ( top - down )
+ - **memoization : ( top - down )**
    - 결과 값에 먼저 접근하려 시도를 하고, 결과값이 없다면, DP를 이용해서 위에서 아래로 값을 구하려 내려가는 기술이다.
  - tabulation : ( bottom - up )
    - 도표, 도표의 작성
    - DP를 이용해서 아래서부터 위로, 구해야하는 값까지 거슬러 올라가서, 값을 구하는 방식이다.
+ - **점화식 구조**
 
 ```cpp
 // Fibonacci 수열 구하기
@@ -56,7 +59,3 @@ long long FactorialInTabulation(int x) {
 }
 
 ```
-
-## 4. DP와 Divide and conquer
- - overlapping property -> DP O, Divide and Conquer X
- - solving subproblems -> DP O, Divide ans Conquer X
