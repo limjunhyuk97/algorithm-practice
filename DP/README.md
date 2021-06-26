@@ -13,6 +13,7 @@
   - optimal : best
   - substructure : sub-problem of main-problem
   - **subproblem들을 optimal 하게 풀면 mainproblem을 optimal하게 풀 수 있다.**
+  - **한번의 선택이 다음 선택에는 전혀 무관하며, 매 순간의 최적해가 문제에 대한 최적해인 상태 (Greedy algorithm과 연관)**
   - x1 > x2 > x3 > x4 ... 문제를 분할해서 main problem으로 다가갈 수 있는가..?
 ## 3. overlapping subproblems property
   - **동일한 연산을 여러번 반복**해야할 경우.
