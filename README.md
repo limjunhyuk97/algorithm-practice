@@ -25,3 +25,11 @@
   - **입력값이 작고, 시간 제한이 널널하고, 효율적인 공통성을 발견하기 어려운 경우** : 브루트포스를 염두.
 ### 5. **이진탐색을 언제 활용해야할까?**
   -  데이터가 정렬되어 있는 배열에서 특정한 값을 찾아낼 때 사용하는데, O(N)을 O(logN)으로 단축시킬 수 있다.
+
+### 6. Divide & Conquer / Greedy / DP
+  - Divide & Conquer는 non-overlapping subproblem들을 해결할 때 사용한다.
+  - DP는 Divide & Conquer의 특수한 경우로, overlapping subproblem들을 해결할 때 사용한다.
+  - Greedy는 매 단계의 결정을 재고려하지 않으며, 짧은 시간 간격의 good/fair한 solution을 제공하지만, DP는 가장 optimal한 해결방식을 제공한다.
+
+
+
