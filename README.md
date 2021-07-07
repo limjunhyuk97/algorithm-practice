@@ -33,7 +33,8 @@
     - 최적화 문제 : f(i)가 1이 되는 i의 최소값을 구해라
     - 결정 문제 : f(i)가 1인가? 
 <img src="https://user-images.githubusercontent.com/59442344/124707461-d1232680-df33-11eb-88a8-cd9633acddd8.png" width=60% height=60%>
-  - **이진탐색의 종료조건**
+ 
+ - **이진탐색의 종료조건**
     - 정확히 떨어지는 값을 찾는 것이 아닌 경우
 ```cpp
 if(...) right = mid - 1
