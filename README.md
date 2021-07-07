@@ -41,6 +41,7 @@ if(...) right = mid - 1
 else left = mid + 1
 // 이런 구조로 짠다면, left 왼쪽에 찾고자하는 값을 고정시킬 수 있게 되고, right가 답을 가리키게 된다.
 ```
+  - [2805](https://github.com/limjunhyuk97/BOJ/tree/main/SILVER/2805_%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89%20%EB%82%98%EB%AC%B4%EC%9E%90%EB%A5%B4%EA%B8%B0): 나무자르기
 
 ### 6. Divide & Conquer / Greedy / DP
   - Divide & Conquer는 non-overlapping subproblem들을 해결할 때 사용한다.
