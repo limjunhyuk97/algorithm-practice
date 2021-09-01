@@ -106,6 +106,7 @@ std::vector<int> nextVisit;
 void DFS(int now) {
 	printf("%d ", now);
 	visit.insert(now);
+	// for-each 반복문
 	for (int next : nodes[now].next) {
 		if (visit.find(next) == visit.end()) DFS(next);
 	}
