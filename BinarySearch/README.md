@@ -4,12 +4,21 @@
   - 이분 탐색을 통해, 최대-최소를 바탕으로 한 **최적의 값을 구하는 최적화 문제**를, 예-아니오를 바탕으로 한 **결정 문제**로 바꿀 수 있다.
 
 ## 이분 탐색 구현
+![image](https://user-images.githubusercontent.com/59442344/133200241-60b116f2-25a3-460a-8f95-27d717abdccf.png)
 
-### 직접 구현
+
+### 직접 구현(1) : 특정 조건을 만족하는 값의 범위 중 가장 작은 값 
   - **left**, right, mid 설정
   - **left <= right 일때 계속 탐색** 진행 (반대로 보면, left > right일 때 종료지점)
   - **mid + 1 , mid - 1로 기준을 계속 갱신** (mid를 기준을 좌우를 나누는데, 결국 mid 오른쪽의 left가 목표지점을 가리키게 됨)
-  - **left > right가 되는 시점에서 종료**
+  - **left > right가 되는 시점에서 종료 후, left 값으로 도출**
+
+### 직접 구현(2) : 특정 조건을 만족하는 값의 범위 중 가장 큰 값
+  - **right**, left, mid 설정
+  - **left <= right 일때 계속 탐색** 진행 (반대로 보면, left > right일 때 종료지점)
+  - **mid + 1 , mid - 1로 기준을 계속 갱신** (mid를 기준을 좌우를 나누는데, 결국 mid 왼쪽의 right가 목표지점을 가리키게 됨)
+  - **left > right가 되는 시점에서 종료 후, right 값으로 도출**
+
 
 ### cpp container 이용
   - map, set container는 red-black tree이기 때문에, **n\*logn 시간복잡도로 n개의 자료들을 빠르게 탐색 및 삽입**할 수 있다.
