@@ -3,7 +3,7 @@
   - 즉, 각 단계에서 이전 단계의 연산이 요구되는, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
     - **subproblem들은 recurrence relation(점화식 구조)로 나타난다.**
   - 이때, **각 단계의 연산 결과를 table에 저장하여 여러번 연산이 일어나지 않도록 하여, multi-stage에서의 결정과정을 optimize시킨다.(optimal substructure)**
-  - **overlapping subproblem 들을 Divide and conquer보다 더 효율적으로 수행가능하다.**
+  - **이런 성질로, overlapping subproblem 들을 Divide and conquer보다 더 효율적으로 수행가능하다.**
 
 ## 01. DP 와 시간복잡도
   - polynomial time을 걸려서 문제 해결 가능 (다항함수 수준의 시간 복잡도) : optimization technique이다.
