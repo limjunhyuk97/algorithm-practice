@@ -2,7 +2,7 @@
   - Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and storing the results of subproblems to avoid computing the same results again.
   - 즉, 각 단계에서 이전 단계의 연산이 요구되는, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
     - **subproblem들은 recurrence relation(점화식 구조)로 나타난다.**
-  - 이때, **각 단계의 연산 결과를 table에 저장하여 여러번 연산이 일어나지 않도록 하여, multi-stage에서의 결정과정을 optimize시킨다.(optimal substructure)**
+  - 이때, **각 단계의 연산 결과를 table에 저장하여 여러번 연산이 일어나지 않도록 하여, multi-stage에서의 결정과정을 optimize시킨다. 단, 각 단계에서의 optimization이 전체 문제를 optimize하는 과정일 때에만 가능하다.(optimal substructure)**
   - **이런 성질로, overlapping subproblem 들을 Divide and conquer보다 더 효율적으로 수행가능하다.**
 
 ## 01. DP 와 시간복잡도
