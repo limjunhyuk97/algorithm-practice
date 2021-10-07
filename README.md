@@ -44,9 +44,13 @@ else left = mid + 1
   - [2805](https://github.com/limjunhyuk97/BOJ/tree/main/SILVER/2805_%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89%20%EB%82%98%EB%AC%B4%EC%9E%90%EB%A5%B4%EA%B8%B0): 나무자르기
 
 ### 6. Divide & Conquer / Greedy / DP
-  - Divide & Conquer는 non-overlapping subproblem들을 해결할 때 사용한다.
-  - DP는 Divide & Conquer의 특수한 경우로, overlapping subproblem들을 해결할 때 사용한다.
-  - Greedy는 매 단계의 결정을 재고려하지 않으며, 짧은 시간 간격의 good/fair한 solution을 제공하지만, DP는 가장 optimal한 해결방식을 제공한다.
+
+|Divide & Conqeur|DP|Greedy|
+|:---:|:---:|:---:|
+|n independent subprolems, solve them blindly|n dependent subproblems that share some values, solve by plan||
+|solve problem recursively|solve problem recursively||
+|solve common problem repeatedly|solve every sub-problems only once, save answers in table, retrieve it later||
+|1.divide(recurrence) 2.conquer 3.merge|1.divide(recurrence) 2.solve little ones and store 3. extract later needed||
 
 
 
