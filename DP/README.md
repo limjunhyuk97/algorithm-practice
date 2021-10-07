@@ -1,4 +1,4 @@
-## 0. DP란?
+# DP란?
   - Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and storing the results of subproblems to avoid computing the same results again.
   - 즉, 각 단계에서 이전 단계의 연산이 요구되는, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
     - **subproblem들은 recurrence relation(점화식 구조)로 나타난다.**
@@ -21,12 +21,18 @@
   - **동일한 연산을 여러번 반복**해야할 경우.
 
 ## 03. DP를 어떻게 활용하는가?
- - **memoization : ( top - down )**
-   - 결과 값에 먼저 접근하려 시도를 하고, 결과값이 없다면, DP를 이용해서 위에서 아래로 값을 구하려 내려가는 기술이다.
- - **tabulation : ( bottom - up )**
-   - 도표, 도표의 작성
-   - DP를 이용해서 아래서부터 위로, 구해야하는 값까지 거슬러 올라가서, 값을 구하는 방식이다.
- - **점화식 구조**
+
+### 1. 큰 문제를 작은 문제로 분할한다. (점화식을 세운다.)
+
+### 2. 작은 문제들(sub problems)을 해결하고, Table에 넣는다.
+
+### 3. 동일한 작은 문제(sub problems)에 부딪혔다면, Table에서 꺼내쓴다.
+
+- **memoization : ( top - down )**
+  - 결과 값에 먼저 접근하려 시도를 하고, 결과값이 없다면, DP를 이용해서 위에서 아래로 값을 구하려 내려가는 기술이다.
+- **tabulation : ( bottom - up )**
+  - 도표, 도표의 작성
+  - DP를 이용해서 아래서부터 위로, 구해야하는 값까지 거슬러 올라가서, 값을 구하는 방식이다.
 
 ```cpp
 // Fibonacci 수열 구하기
