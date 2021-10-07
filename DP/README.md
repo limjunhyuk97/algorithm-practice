@@ -1,6 +1,6 @@
 ## 0. DP란?
  - Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and storing the results of subproblems to avoid computing the same results again.
- - 즉, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
+ - 즉, 각 단계에서 이전 단계의 연산이 요구되는, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
  - 이때, **각 단계의 연산 결과를 table에 저장하여 여러번 연산이 일어나지 않도록 하여, multi-stage에서의 결정과정을 optimize시킨다.(optimal substructure)**
  - **overlapping subproblem들을 Divide and conquer보다 더 효율적으로 수행가능하다.**
 
