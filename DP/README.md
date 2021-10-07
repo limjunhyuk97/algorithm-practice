@@ -1,12 +1,13 @@
 ## 0. DP란?
- - Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and storing the results of subproblems to avoid computing the same results again.
- - 즉, 각 단계에서 이전 단계의 연산이 요구되는, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
- - 이때, **각 단계의 연산 결과를 table에 저장하여 여러번 연산이 일어나지 않도록 하여, multi-stage에서의 결정과정을 optimize시킨다.(optimal substructure)**
- - **overlapping subproblem들을 Divide and conquer보다 더 효율적으로 수행가능하다.**
+  - Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and storing the results of subproblems to avoid computing the same results again.
+  - 즉, 각 단계에서 이전 단계의 연산이 요구되는, **overlapping, dependent subproblem 들을 해결할 때 사용한다.(overlapping subproblem)**
+    - **subproblem들은 recurrence relation(점화식 구조)로 나타난다.**
+  - 이때, **각 단계의 연산 결과를 table에 저장하여 여러번 연산이 일어나지 않도록 하여, multi-stage에서의 결정과정을 optimize시킨다.(optimal substructure)**
+  - **overlapping subproblem 들을 Divide and conquer보다 더 효율적으로 수행가능하다.**
 
 ## 01. DP 와 시간복잡도
- - polynomial time을 걸려서 문제 해결 가능 (다항함수 수준의 시간 복잡도) : optimization technique이다.
- - 다른 방식은 exponential time 걸려서 문제 해결 ( 지수함수 )
+  - polynomial time을 걸려서 문제 해결 가능 (다항함수 수준의 시간 복잡도) : optimization technique이다.
+  - 다른 방식은 exponential time 걸려서 문제 해결 ( 지수함수 )
 
 ## 02. 어떤 문제에 DP를 적용할 수 있을까?
 
