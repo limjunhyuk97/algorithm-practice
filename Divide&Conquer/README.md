@@ -5,17 +5,52 @@
 ### 1. 엄청나게 크고 방대한 문제를 작은 문제로 '분할'하고, 분할된 문제들을 '조합'하면서 정복하는 방법이다.
 
 ### 2. 분할 / 정복/ 조합 의 단계로 구성된다.
-  - 분할 : 문제를 동일 유형의 여러 하위 문제로 나눈다.
-  - 정복 : 가장 작은 하위 문제를 해결하여 정복한다.
-  - 조합 : 정복된 하위 단계를 원래 문제에 대한 결과로 조합한다.
+  - **분할** : 문제를 동일 유형의 여러 하위 문제로 나눈다. D(n)
+  - **정복** : 가장 작은 하위 문제를 해결하여 정복한다. S(n)
+  - **조합(필요하다면)** : 정복된 하위 단계를 원래 문제에 대한 결과로 조합한다. C(n)
+    - (예) binary search - 조합과정 필요없음, merge sort - 조합과정 요구된다.
 
+### 3. 시간 복잡도
+  - **T(n) = aT(n/b) + f(n)(= D(n)+C(n))**
+  - **master theorem**에 의해서 단순화 시킬 수 있다.
+ 
 ## 예시
 
 ### 1. Merge sort
-  - 시간 복잡도는 O(nlogn)이지만, 다른 정렬방식에 비해 메모리를 많이 사용한다.
+  - 시간 복잡도는 O(nlogn)이지만, 다른 정렬방식에 비해 메모리를 더 사용한다.
 
 ```cpp
+// 오름차순 정렬
+void merge_array(int* origin, int* arrL, int* arrR, int left, int mid, int right) {
+	int l = 0, r = 0, k = left;
+	while (l < (mid - left) && r < (right - mid)) {
+		if (arrL[l] <= arrR[r]) origin[k++] = arrL[l++];
+		else origin[k++] = arrR[r++];
+	}
+	if (l == mid - left) for (; r < right - mid; ++r) origin[k++] = arrR[r];
+	else for (; l < mid - left; ++l) origin[k++] = arrL[l];
+}
 
+void merge_sort(int* arr, int size) {
+
+	// 종료 조건
+	if (size == 1) return;
+
+	// divide
+	int half = size >> 1;
+	int* arrL = (int*)malloc(sizeof(int) * (half));
+	int* arrR = (int*)malloc(sizeof(int) * (size - half));
+	copy_array(arr, arrL, 0, half);
+	copy_array(arr, arrR, half, size);
+
+	// conquer
+	merge_sort(arrL, half);
+	merge_sort(arrR, size - half);
+
+	// combine
+	merge_array(arr, arrL, arrR, 0, half, size);
+
+}
 ```
 
 ### 2. a^b 구하기
