@@ -44,13 +44,37 @@ else left = mid + 1
   - [2805](https://github.com/limjunhyuk97/BOJ/tree/main/SILVER/2805_%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89%20%EB%82%98%EB%AC%B4%EC%9E%90%EB%A5%B4%EA%B8%B0): 나무자르기
 
 ### 6. Divide & Conquer / Greedy / DP
+- optimization / non-optimization ?
+- overlapping problem ?
+- 
 
-|Divide & Conqeur|DP|Greedy|
-|:---:|:---:|:---:|
-|n independent subprolems, solve them blindly|n dependent subproblems that share some values, solve by plan||
-|solve problem recursively|solve problem recursively||
-|solve common problem repeatedly|solve every sub-problems only once, save answers in table, retrieve it later||
-|1.divide(recurrence) 2.conquer 3.merge|1.divide(recurrence) 2.solve little ones and store 3. extract later needed||
+- **Basic principle**
+  - **Divide and Conquer**
+    - divide into smaller instances until they can be solved, conquer, and merge the solutions (optimization / non-optimization)
+    - non-overlapping, big size problem
+    - use top-down approach
+    - use recursive algorithm
+    - get solution using **call stack**
+    - **steps : divide - conquer - merge**
+    - examples
+      - BST, merge sort, quick sort 
+  - **Dynamic Programming**
+    - optimizing multistage decision process by store and extract solution from table(optimization / non-optimization) 
+    - overlapping, dependent subproblem + only problem with optimal substructure (optimal subproblem)
+    - use bottom-up approach(+top-down approach)
+    - use recurrence relation 
+    - get solution using **look-up table** which stores solutions of each stages
+    - **steps : establish recurrence relation, solve - store - extract**
+    - examples
+      - optimal BST, Coin change, binomial coefficient, floyd-warshall 
+  - **Greedy**
+    - arrives at solution by constructing solution set through a sequence of optimal choices (optimization)
+    - sequence of local optimal choices produce global optimal solution.
+    - use iteration
+    - get solution using **solution set**, adding items into it, until solution set represents a solution to instance
+    - **steps : selection, feasibility check, solution check**
+    - examples
+     - constructing MST(Kruskal, Prim), Shortest Path(Dijkstra)  
 
 
 
