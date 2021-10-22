@@ -57,7 +57,7 @@ else left = mid + 1
     - get solution using **call stack**
     - **steps : divide - conquer - merge**
     - examples
-      - BST, merge sort, quick sort 
+      - BS, merge sort, quick sort 
   - **Dynamic Programming**
     - optimizing multistage decision process by store and extract solution from table(optimization / non-optimization) 
     - big size problem, overlapping, dependent subproblem + only problem with optimal substructure (optimal subproblem)
