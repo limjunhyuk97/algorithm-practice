@@ -60,7 +60,7 @@ else left = mid + 1
       - BS, merge sort, quick sort 
   - **Dynamic Programming**
     - optimizing multistage decision process by store and extract solution from table(optimization / non-optimization) 
-    - big size problem, overlapping, dependent subproblem + only problem with optimal substructure (optimal subproblem)
+    - big size problem, overlapping, dependent subproblem + optimization problem 에서 given problem의 optimal solution은 반드시 모든 substructure들의 optimal solution을 포함하고 있어야 한다.
     - use bottom-up approach(+top-down approach)
     - use recurrence relation 
     - get solution using **look-up table** which stores solutions of each stages
