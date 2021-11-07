@@ -1,6 +1,8 @@
 # Jun's Algoritm space
 
 ## Hoarding my problem solving techniques
+  - **번거로운 방법을 포괄하는 일반화된 방법을 생각해보자.**
+  - **더 구체적인 실수 표현을 도입해야 한다면 long double을 고려한다.(%lF)**
 
 ## Daily scrum
 
