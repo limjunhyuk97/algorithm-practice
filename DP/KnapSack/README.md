@@ -1,4 +1,6 @@
 # Knapsack
+  - zero-one knapsack : Dynamic programming
+  - non zero-one knapsack : Greedy Algorithm
 
 ## [참고](https://github.com/limjunhyuk97/BOJ/blob/main/Gold/12865_DP_0-1Knapsack/README.md)
 
