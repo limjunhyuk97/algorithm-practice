@@ -29,7 +29,7 @@ void checknode (node P){
 }
 
 // promising 함수
-bool promising(){
+bool promising(index i){
   // 문제 조건에 따라 내용이 달라진다.
 }
 ```
