@@ -9,9 +9,30 @@
   - non-promising node : solution으로 진행될 수 있는 잠재력이 없는 노드. (constraint에 의해 걸러진 노드)
   - pruned state space tree : 이미 방문되어서 더 이상 볼필요 없이 제거된 branch
 - **Backtracking의 진행 순서**
-  - tree model 생성
-  - promising constraint 생성
-  - DFS + promising constraint 통해서 solution 발견
+  - tree model에서 DFS 수행하는 함수 생성
+  - constraint 조건 갖는 promising 함수 생성
+    - constraint 조건 고려를 위한 자료구조도 고려
+
+```cpp
+// DFS 수행
+void checknode (node P){
+  node C; 
+  if(promising(C)){
+    if(solution at P){
+      write the solution
+    }
+    else{
+      for(each child C of P)
+        checknode(C);
+    }
+  }
+}
+
+// promising 함수
+bool promising(){
+  // 문제 조건에 따라 내용이 달라진다.
+}
+```
 
 ## Backtracking vs Greedy
 
