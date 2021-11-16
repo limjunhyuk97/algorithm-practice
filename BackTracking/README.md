@@ -1,10 +1,26 @@
 # Backtracking (백 트래킹)
+- **어떤 object 집합에서 criteria를 만족하는 object의 sequence나, object의 combination을 구할 때 사용**한다.
+- **state space tree**라는 implicit한 자료구조를 사용한다.
+  - state space tree는 object를 선택하는 모든 가능한 방법들을 담고 있는 의미론적인 트리구조이다.
+  - 각 노드들을 state space라고 한다.
+- **state space tree를 DFS(깊이 우선 탐색) 기법으로 preorder하게 순회**한다.
+- **promising하는 node들에 대해서는 순회를 계속**하고, **non-promising하는 node들에서는 다시 부모노드로 돌아가는 방식으로 그 하위 subtree를 prune(가지치기)** 한다.
+  - promising node : solution으로 진행될 수 있는 잠재력을 가진 노드. (constraint에 아직까지 부합하는 노드) 
+  - non-promising node : solution으로 진행될 수 있는 잠재력이 없는 노드. (constraint에 의해 걸러진 노드)
+  - pruned state space tree : 이미 방문되어서 더 이상 볼필요 없이 제거된 branch
+- **Backtracking의 진행 순서**
+  - tree model 생성
+  - promising constraint 생성
+  - DFS + promising constraint 통해서 solution 발견
 
-## Backtracking이란?
-  - CSP(조건만족문제)를 해결하기 위해 사용한다.
-  - 조건을 만족할 때의 모든 조합의 수를 살펴보는 방법.
+## Backtracking vs Greedy
 
-## DFS와 Backtracking
-  - DFS는 완전탐색방법의 하나로, 모든 곳을 깊이 우선으로 방문한다.
-  - Backtracking은 조건을 만족하지 않는 지점을 제외하여 비효율적인 경로를 차단한다.
-  - Backtracking은 DFS + 가지치기(Pruning)을 통해서 효율을 높이는 알고리즘 기법이다.
+||Backtracking|Greedy|
+|:---:|:---:|:---:|
+|공통점|constraint에 부합하는 solution을 단계마다 선택한다|constraint에 부합하는 solution을 단계마다 선택한다|
+|차이점|이전 step으로 돌아갈 수 있다|이전 step으로 돌아갈 수 없다|
+||이전 step들을 고려한다|현재 step만을 고려한다|
+
+## Backtracking vs DFS
+  - Backtracking은 DFS + constraint이다.
+  - 즉, DFS로 그래프(엄밀히 말하면 state space tree)를 탐색하는데, promising한 노드의 경우에만 더 깊게 파고들어간다.
