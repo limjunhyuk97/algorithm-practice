@@ -1,11 +1,12 @@
 # Backtracking (백 트래킹)
+
 - **어떤 object 집합에서 criteria를 만족하는 object의 sequence나, object의 combination을 구할 때 사용**한다.
 - **state space tree**라는 implicit한 자료구조를 사용한다.
   - state space tree는 object를 선택하는 모든 가능한 방법들을 담고 있는 의미론적인 트리구조이다.
   - 각 노드들을 state space라고 한다.
 - **state space tree를 DFS(깊이 우선 탐색) 기법으로 preorder하게 순회**한다.
 - **promising하는 node들에 대해서는 순회를 계속**하고, **non-promising하는 node들에서는 다시 부모노드로 돌아가는 방식으로 그 하위 subtree를 prune(가지치기)** 한다.
-  - promising node : solution으로 진행될 수 있는 잠재력을 가진 노드. (constraint에 아직까지 부합하는 노드) 
+  - promising node : solution으로 진행될 수 있는 잠재력을 가진 노드. (constraint에 아직까지 부합하는 노드)
   - non-promising node : solution으로 진행될 수 있는 잠재력이 없는 노드. (constraint에 의해 걸러진 노드)
   - pruned state space tree : 이미 방문되어서 더 이상 볼필요 없이 제거된 branch
 - **Backtracking의 진행 순서**
@@ -43,5 +44,13 @@ bool promising(index i){
 ||이전 step들을 고려한다|현재 step만을 고려한다|
 
 ## Backtracking vs DFS
-  - Backtracking은 DFS + constraint이다.
-  - 즉, DFS로 그래프(엄밀히 말하면 state space tree)를 탐색하는데, promising한 노드의 경우에만 더 깊게 파고들어간다.
+
+- Backtracking은 DFS + constraint이다.
+- 즉, DFS로 그래프(엄밀히 말하면 state space tree)를 탐색하는데, promising한 노드의 경우에만 더 깊게 파고들어간다.
+
+## 문제
+
+### 1062.가르침
+
+- DFS를 통해서 가르칠 수 있는 범위 내의 문자들을 싹다 고른다. -> 그 후 해당 문자들을 바탕으로 읽어낼 수 있는 단어가 몇개인지 파악한다.
+- promising한 부분만을 골라내어 prune 하는 과정이 존재하지 않는다. (DFS에 더 가깝다고 생각.)
