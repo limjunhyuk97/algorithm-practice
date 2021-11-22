@@ -16,6 +16,7 @@
     - constraint 조건 고려를 위한 자료구조도 고려
 
 ## 2. optimization Backtracking
+- 최적의 답안을 구해낼 때에도 Backtracking을 사용할 수 있다.
 
 ## 3. General Skeleton
 
@@ -40,6 +41,23 @@ void checknode (node P){
 bool promising(index i){
   // 문제 조건에 따라 내용이 달라진다.
 }
+
+///////////////////////////// non-optimization Backtracking /////////////////////////////
+
+// DFS 수행
+void checknode (node Parent){
+  if(value(Parent) > BestValue){
+    BestValue = value(Parent)
+  }
+  if(promising(Parent)){
+    for(each child C of Parent)
+      checknode(C);
+  }
+}
+
+// promising 함수
+
+// value 함수
 ```
 
 ## Backtracking vs Greedy
