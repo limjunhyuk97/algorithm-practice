@@ -17,6 +17,8 @@
 
 ## 2. optimization Backtracking
 
+## 3. General Skeleton
+
 ```cpp
 ///////////////////////////// non-optimization Backtracking /////////////////////////////
 
