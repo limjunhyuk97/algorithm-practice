@@ -42,7 +42,7 @@ bool promising(index i){
   // 문제 조건에 따라 내용이 달라진다.
 }
 
-///////////////////////////// non-optimization Backtracking /////////////////////////////
+///////////////////////////// optimization Backtracking /////////////////////////////
 
 // DFS 수행
 void checknode (node Parent){
