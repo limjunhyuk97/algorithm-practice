@@ -15,6 +15,8 @@
     - constraint 조건 고려를 위한 자료구조도 고려
 
 ```cpp
+///////////////////////////// non-optimization Backtracking /////////////////////////////
+
 // DFS 수행
 void checknode (node P){
   node C; 
