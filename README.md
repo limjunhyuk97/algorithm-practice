@@ -45,7 +45,7 @@ else left = mid + 1
 ```
   - [2805](https://github.com/limjunhyuk97/BOJ/tree/main/SILVER/2805_%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89%20%EB%82%98%EB%AC%B4%EC%9E%90%EB%A5%B4%EA%B8%B0): 나무자르기
 
-### 6. Divide & Conquer / Greedy / DP
+### 6. Divide & Conquer / Greedy / DP / Backtracking
 - optimization / non-optimization ?
 - overlapping problem ?
 - 
@@ -76,7 +76,15 @@ else left = mid + 1
     - get solution using **solution set**, adding items into it, until solution set represents a solution to instance
     - **steps : selection, feasibility check, solution check**
     - examples
-     - constructing MST(Kruskal, Prim), Shortest Path(Dijkstra)  
-
+      - constructing MST(Kruskal, Prim), Shortest Path(Dijkstra)  
+  - **Backtracking**
+    - same as greedy, arrives at solution set through a seqeuence of optimal choices (optimization / non-optimization)
+    - Unlike Greedy, consider before stage and can backtrack.
+    - Unlike DFS, can prune non-promising branches
+    - use State space tree, DFS + constraint
+    - **steps : construct 'tree for DFS', construct 'promising function' for pruning**
+    - examples
+      - N-queen problem, sum of subsets problem (non-optimization problem)
+      - 0-1 knapsack problem (optimization problem)
 
 
