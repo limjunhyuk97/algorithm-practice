@@ -1,6 +1,7 @@
 # Backtracking (백 트래킹)
 
 ## 1. non-optimization Backtracking
+
 - **어떤 object 집합에서 criteria를 만족하는 object의 sequence나, object의 combination을 구할 때 사용**한다.
 - **state space tree**라는 implicit한 자료구조를 사용한다.
   - state space tree는 object를 선택하는 모든 가능한 방법들을 담고 있는 의미론적인 트리구조이다.
@@ -16,6 +17,7 @@
     - constraint 조건 고려를 위한 자료구조도 고려
 
 ## 2. optimization Backtracking
+
 - 최적의 답안을 구해낼 때에도 Backtracking을 사용할 수 있다.
 
 ## 3. General Skeleton
