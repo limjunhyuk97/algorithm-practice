@@ -8,7 +8,7 @@
 - **optimizaiton problem을 해결하기 위해** 사용된다.
 - **state-space-tree를 사용**하지만, **traversal order가 미리 정해져있지 않다.**
   - running time에 다음으로 방문할 노드가 결정된다.
-  - 이를 통해서 backtracking 보다 time complexity가 좋은 이유가 여기서 발생한다.
+  - backtracking 보다 time complexity가 좋은 이유가 여기서 발생한다.
 - **BFS(Best First Search) + Pruning 을 사용한다.**
 - **promising function이 numerical value를 내놓는다.**
   - backtracking 은 DFS 로 타고 들어가서 + 여지껏 찾은 max value 와 bound를 비교한 boolean return
