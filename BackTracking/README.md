@@ -28,7 +28,7 @@
 // DFS 수행
 void checknode (node P){
   node C; 
-  if(promising(C)){
+  if(promising(P)){
     if(solution at P){
       write the solution
     }
