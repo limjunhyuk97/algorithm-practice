@@ -1,7 +1,7 @@
 # Branch and Bound
 
-- Breadth First Search + fixed traversal + pruning
-- Best First Search + flexible traversal + pruning
+- Breadth First Search + fixed traversal(queue structure) + pruning
+- Best First Search + flexible traversal(priority queue structure) + pruning
 
 ## 1. For optimization problem
 
