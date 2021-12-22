@@ -135,6 +135,7 @@ void knapsack3(int n, int p[], int w[], int W, int &maxprofit){
     node c, p;
     maxprofit = 0;
     p.level = 0; p.profit = 0; p.weight = 0; p.bound = bound(p);
+    pq.enqueue(p);
     // bound를 통해서 deque에서 꺼냈을 때 고려할 지 말지
     while(!pq.isempty()){
         // 가장 큰 bound value 갖는 node를 뽑아낸다.
