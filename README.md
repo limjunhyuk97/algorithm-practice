@@ -81,7 +81,7 @@ else left = mid + 1
     - same as greedy, arrives at solution set through a seqeuence of optimal choices (optimization / non-optimization)
     - Unlike Greedy, consider before stage and can backtrack.
     - Unlike DFS, can prune non-promising branches
-    - use State space tree, DFS + constraint
+    - use State space tree, **DFS(stack) + constraint**
     - **steps : construct 'tree for DFS', construct 'promising function' for pruning**
     - examples
       - N-queen problem, sum of subsets problem (non-optimization problem)
