@@ -1,5 +1,7 @@
 # Backtracking (백 트래킹)
 
+- DFS + Promising(constraint)
+
 ## 1. non-optimization Backtracking
 
 - **어떤 object 집합에서 criteria를 만족하는 object의 sequence나, object의 combination을 구할 때 사용**한다.
